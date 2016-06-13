@@ -6,9 +6,8 @@ class Solution(object):
         """
         n = len(nums)
         nums = sorted(nums)
-        res = []
+        res = set()
         dic={}
-        exist={}
         
         for i in xrange(n):
             if nums[i] not in dic:
@@ -16,8 +15,6 @@ class Solution(object):
         for i in xrange(n):
             for j in xrange(i+1,n):
                 if -(nums[i] + nums[j]) in dic and dic[-(nums[i] + nums[j])] != i and dic[-(nums[i] + nums[j])] != j:
-                    temp = sorted( [nums[i], nums[j], nums[dic[-(nums[i]+nums[j])]]] )
-                    if tuple(temp) not in exist:
-                        res += [temp]
-                        exist[tuple(temp)] = 1
-        return res
+                    temp = tuple( sorted( [nums[i], nums[j], nums[dic[-(nums[i]+nums[j])]]] ))
+                    res.add(temp)
+        return list(res)
