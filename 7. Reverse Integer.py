@@ -8,6 +8,7 @@ class Solution(object):
         if x < 0:
             x = -x
             sign = -1
-        if int(str(x)[::-1]) >= 2147483647:
+        temp = int(str(x)[::-1])
+        if temp >= 2147483647:
             return 0
-        return int(str(x)[::-1]) if sign == 1 else -int(str(x)[::-1])
+        return temp if sign == 1 else -temp
