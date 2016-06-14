@@ -10,11 +10,10 @@ public:
         }
         for (int i = 0; i < nums.size(); i++)
         {
-            if ( dic.count( target-nums[i] ) > 0 && i != dic[target-nums[i]] )
+            if ( dic.count( target-nums[i] ) > 0 && i > dic[target-nums[i]] )
             {
                 res.push_back( i );
                 res.push_back( dic[target-nums[i]] );
-                sort( res.begin(), res.end() );
                 return res;
             }   
         }
