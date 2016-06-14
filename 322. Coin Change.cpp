@@ -14,8 +14,6 @@ public:
                     T[a] = min(T[a - coins[c]] + 1, T[a]);
             }
         }
-        if (T[amount] == amount + 1)
-            return -1;
-        return T[amount];
+        return T[amount] == amount + 1 ? -1 : T[amount];
     }
 };
