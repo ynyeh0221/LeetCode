@@ -7,9 +7,8 @@ class Solution(object):
         dic = {}
         for i in nums:
             if i not in dic:
-                dic[i] = 0
-            dic[i] += 1
-            if dic[i] == 2:
+                dic[i] = 1
+            else:
                 del dic[i]
         for key, value in dic.items():
             return key
