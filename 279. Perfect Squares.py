@@ -7,10 +7,9 @@ class Solution(object):
         :rtype: int
         """
         T = [n+1 for i in xrange(n+1)]
-        for i in xrange(1, n + 1):
-            if i*i <= n:
-                T[i*i] = 1
+        T[0], T[1]  = 0, 1
         for i in xrange(1, n + 1):
             for j in xrange(1, i):
-                T[i] = min(T[i], T[i-j] + T[j])
+                if j*j <= i:
+                    T[i] = min(T[i], T[i-j*j] + 1)
         return T[n]
