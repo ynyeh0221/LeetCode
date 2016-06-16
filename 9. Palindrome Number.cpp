@@ -9,7 +9,7 @@ public:
         while (x > 0)
         {
             temp = temp * 10 + x % 10;
-            if (x == temp || x / 10 == temp) //total digits is even or odd
+            if (x == temp || x / 10 == temp) //total digits is odd or even
                 return true;
             x /= 10;
         }
