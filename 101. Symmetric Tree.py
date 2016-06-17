@@ -12,8 +12,7 @@ class Solution(object):
         :rtype: bool
         """
         self.res = True
-        p1, p2 = root, root
-        self.symm(p1, p2)
+        self.symm(root, root)
         return self.res
     
     def symm(self, p1, p2):
@@ -27,5 +26,6 @@ class Solution(object):
             return
         if p1.val != p2.val:
             self.res = False
+            return
         self.symm(p1.left, p2.right)
         self.symm(p1.right, p2.left)
