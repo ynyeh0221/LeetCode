@@ -5,8 +5,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        if m == 1 or n == 1:
-            return 1
         res = 1
         for i in xrange(m, m+n-1):
             res *= i
