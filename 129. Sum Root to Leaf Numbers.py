@@ -12,13 +12,13 @@ class Solution(object):
         :rtype: int
         """
         self.res = 0
-        self.preorder("", root)
+        self.preorder(0, root)
         return self.res
     
     def preorder(self, path, root):
         if not root:
             return
         if not root.left and not root.right:
-            self.res += int(path + str(root.val))
-        self.preorder(path + str(root.val), root.left)
-        self.preorder(path + str(root.val), root.right)
+            self.res += 10 * path + root.val
+        self.preorder(10 * path + root.val, root.left)
+        self.preorder(10 * path + root.val, root.right)
