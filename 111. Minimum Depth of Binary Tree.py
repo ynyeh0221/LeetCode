@@ -24,6 +24,5 @@ class Solution(object):
             if height + 1 < self.minheight:
                 self.minheight = height + 1
             return
-        height += 1
-        self.DFS(root.left, height)
-        self.DFS(root.right, height)
+        self.DFS(root.left, height + 1)
+        self.DFS(root.right, height + 1)
