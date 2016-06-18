@@ -2,7 +2,7 @@
 class Solution {
 public:
     int lengthOfLastWord(string s) {
-        vector <int> res;
+        int res = 0;
         int length = 0;
         for (int i = 0; i < s.length(); i++)
         {
@@ -12,13 +12,13 @@ public:
             {
                 if (length > 0)
                 {
-                    res.push_back(length);
+                    res = length;
                     length = 0;
                 }
             }
         }
         if (length > 0)
-            res.push_back(length);
-        return res.size() == 0 ? 0 : res[res.size() - 1];
+            res = length;
+        return res == 0 ? 0 : res;
     }
 };
