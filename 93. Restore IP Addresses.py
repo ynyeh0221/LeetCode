@@ -22,6 +22,4 @@ class Solution(object):
                 break
             temp = s[start:start+j]
             if int(temp) >= 0 and int(temp) <= 255:
-                path = path + [temp]
-                self.DFS(start+j, path, s)
-                path.pop()
+                self.DFS(start+j, path + [temp], s)
