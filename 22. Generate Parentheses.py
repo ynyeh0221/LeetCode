@@ -5,8 +5,7 @@ class Solution(object):
         :rtype: List[str]
         """
         self.res = []
-        left, right = n, n
-        self.DFS(left, right, n, "")
+        self.DFS(n, n, n, "")
         return self.res
         
     def DFS(self, left, right, n, path):
