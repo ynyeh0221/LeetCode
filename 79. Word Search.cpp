@@ -19,7 +19,7 @@ public:
         return false;
     }
     
-    bool DFS(int i, int j, int windex, vector<vector<char>> board, string word, vector <vector<bool>> visited)
+    bool DFS(int i, int j, int windex, vector<vector<char>>& board, string word, vector <vector<bool>> visited)
     {
         if (windex == word.size()) return true;
         if (i<0 || j<0 || i>=m || j>=n || visited[i][j] || board[i][j] != word[windex]) return false;
