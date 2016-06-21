@@ -17,4 +17,4 @@ class Solution(object):
                 res += [i-1]
         if len(res) == 1:
             res += [len(nums)-1]
-        return res if len(res) > 0 and res[0] > -1 else [-1, -1]
+        return res if len(res) > 0 else [-1, -1]
