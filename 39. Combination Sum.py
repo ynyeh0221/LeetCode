@@ -7,7 +7,7 @@ class Solution(object):
         """
         self.res = []
         self.DFS([], candidates, target)
-        return self.res
+        return list(self.res)
     
     def DFS(self, path, candidates, target):
         if target == 0:
@@ -15,7 +15,6 @@ class Solution(object):
             return
         for i in candidates:
             if i <= target:
-                if len(path) == 0:
-                    self.DFS(path + [i], candidates, target - i)
-                elif i >= path[len(path) - 1]:
-                    self.DFS(path + [i], candidates, target - i)
+                if len(path) > 0 and i < path[len(path) - 1]:
+                    continue
+                self.DFS(path + [i], candidates, target - i)
