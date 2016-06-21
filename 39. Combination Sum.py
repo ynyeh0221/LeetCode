@@ -7,7 +7,7 @@ class Solution(object):
         """
         self.res = []
         self.DFS([], candidates, target)
-        return list(self.res)
+        return self.res
     
     def DFS(self, path, candidates, target):
         if target == 0:
