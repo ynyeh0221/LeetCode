@@ -4,7 +4,6 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        T = [0 for i in xrange(n+1)]
         if n == 2:
             return 1
         elif n == 3:
@@ -15,6 +14,7 @@ class Solution(object):
             return 6
         elif n == 6:
             return 9
+        T = [0 for i in xrange(n+1)]
         T[2] = 1
         T[3] = 2
         T[4] = 4
