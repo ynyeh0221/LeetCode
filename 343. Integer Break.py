@@ -15,8 +15,6 @@ class Solution(object):
         elif n == 6:
             return 9
         T = [0 for i in xrange(n+1)]
-        T[2] = 1
-        T[3] = 2
         T[4] = 4
         T[5] = 6
         T[6] = 9
