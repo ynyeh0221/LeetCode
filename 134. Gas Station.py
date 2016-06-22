@@ -5,7 +5,7 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        tank = [gas[i] - cost[i] for i in xrange(len(gas))] # current gas in tank
+        tank = [gas[i] - cost[i] for i in xrange(len(gas))]
         if sum(tank) < 0:
             return -1
         i = 0
