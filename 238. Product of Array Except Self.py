@@ -10,8 +10,7 @@ class Solution(object):
             temp *= nums[i-1]
             res[i] *= temp
         temp = 1
-        for i in xrange(len(nums)-1, -1, -1):
-            if i<len(nums)-1:
-                temp *= nums[i+1]
+        for i in xrange(len(nums)-2, -1, -1):
+            temp *= nums[i+1]
             res[i] *= temp
         return res
