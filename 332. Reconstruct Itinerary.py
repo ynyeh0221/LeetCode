@@ -29,7 +29,7 @@ class Solution(object):
                     visited[start][i] = True
                     self.DFS(path + [fromto[start][i]], fromto[start][i], fromto, visited)
                     visited[start][i] = False
-                    if len(self.res) > 0:
+                    if len(self.res) > 0: # If we have a solution, it must be the one with the smallest lexical order. So we don't need to find other solutions.
                         break
         except:
             return
