@@ -14,7 +14,7 @@ class Solution(object):
             fromto[i[0]] += [i[1]]
             visited[i[0]] += [False]
         for key in fromto.keys():
-            fromto[key] = sorted(fromto[key])
+            fromto[key] = sorted(fromto[key]) # to make sure that the first solution has the smallest lexical order
         self.res = []
         self.DFS(["JFK"], "JFK", fromto, visited)
         return self.res
