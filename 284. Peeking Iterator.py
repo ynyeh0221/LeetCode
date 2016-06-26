@@ -55,9 +55,7 @@ class PeekingIterator(object):
         """
         :rtype: bool
         """
-        if self.i.hasNext() or (not self.i.hasNext() and self.nextnum < sys.maxint):
-            return True
-        return False
+        return True if self.i.hasNext() or (not self.i.hasNext() and self.nextnum < sys.maxint) else False
         
 
 # Your PeekingIterator object will be instantiated and called as such:
