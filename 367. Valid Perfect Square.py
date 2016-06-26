@@ -1,3 +1,4 @@
+# the same as 69. Sqrt(x)
 class Solution(object):
     def isPerfectSquare(self, num):
         """
