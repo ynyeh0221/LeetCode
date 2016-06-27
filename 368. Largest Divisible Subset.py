@@ -15,4 +15,4 @@ class Solution(object):
                     pre = nums[j]
             if len(res) < len(temp):
                 res = temp
-        return res[::-1]
+        return res
