@@ -16,7 +16,6 @@
  * };
  */
 class NestedIterator {
-    
 private:
     int index;
     vector<int> nums;
