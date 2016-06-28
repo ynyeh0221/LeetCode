@@ -26,10 +26,7 @@ class BSTIterator(object):
         """
         :rtype: bool
         """
-        if len(self.nums) > 1:
-            return True
-        else:
-            return False
+        return True if len(self.nums) > 1 else False
 
     def next(self):
         """
