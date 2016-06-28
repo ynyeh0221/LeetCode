@@ -1,5 +1,6 @@
 # timeout
 
+import sys
 class Solution(object):
     def nthSuperUglyNumber(self, n, primes):
         """
@@ -11,9 +12,14 @@ class Solution(object):
         res = [1]
         dic = {}
         while len(res) < n:
-            temps = [primes[i]*res[inds[i]] for i in xrange(len(primes))]
-            minn = min(temps)
-            inds[temps.index(minn)] += 1
+            minn = sys.maxint
+            index = 0
+            for i in xrange(len(primes)):
+                temp = primes[i]*res[inds[i]]
+                if temp < minn:
+                    minn = temp
+                    index = i
+            inds[index] += 1
             if minn not in dic:
                 res += [minn]
                 dic[minn] = 1
