@@ -14,7 +14,7 @@ class Solution(object):
             elif (int(s[0:2]) <= 26 and s[1] == '0') or (int(s[0:2]) > 26 and s[1] != '0'):
                 T[1] = 1
             else:
-                T[1] = 0
+                return 0
         for i in xrange(2, len(s)):
             if s[i] == '0' and s[i-1] == '0':
                 return 0
