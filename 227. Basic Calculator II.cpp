@@ -1,7 +1,7 @@
 class Solution {
 public:
     int calculate(string s) {
-    int result = 0, num = 0, temp = 0;
+    int res = 0, num = 0, temp = 0;
     char op = '+';
     for (int i = 0; i < s.length(); i++)
     {
@@ -15,7 +15,7 @@ public:
             }
             if (op == '+' || op == '-')
             {
-                result += temp;
+                res += temp;
                 temp = num * (op == '-' ? -1 : 1);
             }
             else if (op == '*')
@@ -26,7 +26,7 @@ public:
         if (s[i] != ' ')
             op = s[i];
     }
-    result += temp;
-    return result;
+    res += temp;
+    return res;
     }
 };
