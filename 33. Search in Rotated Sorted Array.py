@@ -17,7 +17,7 @@ class Solution(object):
             return -1
         else:
             for i in xrange(len(nums)-1, -1, -1):
-                if nums[i] >= temp:
+                if nums[i] > temp:
                     return -1
                 if nums[i] == target:
                     return i
