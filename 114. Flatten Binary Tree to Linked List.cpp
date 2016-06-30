@@ -7,7 +7,6 @@
  *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  * };
  */
-#include <queue>
 class Solution {
 private:
     queue <TreeNode*> q; 
