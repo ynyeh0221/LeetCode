@@ -11,10 +11,10 @@ class Solution(object):
                 ind1 = i - 1
                 break
         minn = sys.maxint
-        for j in xrange(ind1+1, len(nums)):
-            if nums[j] < minn and nums[j] > nums[ind1]:
-                minn = nums[j]
-                ind2 = j
+        for i in xrange(ind1+1, len(nums)):
+            if nums[i] < minn and nums[i] > nums[ind1]:
+                minn = nums[i]
+                ind2 = i
         nums[ind1], nums[ind2] = nums[ind2], nums[ind1]
         temp = sorted(nums[ind1+1:])
         for i in xrange(ind1+1, len(nums)):
