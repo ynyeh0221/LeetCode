@@ -1,5 +1,11 @@
 class Solution {
 public:
+    void swap(int& a, int& b)
+    {
+        int t = a;
+        a = b;
+        b = t;
+    }
     void nextPermutation(vector<int>& nums) {
         int ind1 = nums.size()-1, ind2 = nums.size()-1;
         for (int i = nums.size()-1; i >= 0; i--)
@@ -23,9 +29,7 @@ public:
             sort(nums.begin(), nums.end());
         else
         {
-            int t = nums[ind1];
-            nums[ind1] = nums[ind2];
-            nums[ind2] = t;
+            swap(nums[ind1], nums[ind2]);
             vector <int> temp (nums.begin() + ind1 + 1, nums.end());
             sort(temp.begin(), temp.end());
             for (int i = ind1 + 1; i < nums.size(); i++)
