@@ -5,12 +5,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        ind1 = len(nums)-1
+        ind1, ind2 = len(nums)-1, len(nums)-1
         for i in xrange(len(nums)-1, -1, -1):
             if nums[i] > nums[i-1]:
                 ind1 = i - 1
                 break
-        ind2 = len(nums)-1
         minn = sys.maxint
         for j in xrange(ind1+1, len(nums)):
             if nums[j] < minn and nums[j] > nums[ind1]:
