@@ -12,6 +12,6 @@ class Solution(object):
         while b > 0:
             if b % 2 == 1:
                 res = (res * a) % mod
-            b = b/2
+            b = b//2
             a = (a * a) % mod
         return res
